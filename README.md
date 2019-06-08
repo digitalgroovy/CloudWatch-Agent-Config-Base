@@ -9,7 +9,8 @@ To create a monitoring confg file in the ec2 root directory with vim, copy the j
 Switch vim to insert mode and paste in the json file.
 
 To start it: sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:agentconfig.cfg -s
-	
+
+To verify the agent started run: sudo service amazon-cloudwatch-agent status	
 	
 	
 	
