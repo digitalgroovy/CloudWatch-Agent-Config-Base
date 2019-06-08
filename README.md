@@ -1,11 +1,14 @@
 # CloudWatch-Agent-Config-Base
 Basic configuration file for CloudWatch Agent installation on an EC2 Instance. 
 
-	After cloudwatch agent deb file has been installed, add this repo's json file. cd /opt/aws/amazon-cloudwatch-		agent/etc/amazon-cloudwatch-agent.d   this directory should be empty initally.
+After cloudwatch agent deb file has been installed, you will find a directory created at /opt/aws/amazon-cloudwatch-agent/etc/common-config.toml If you have to change or add IAM permissions, you can edit this file with vim or nano.
+
 	
-	Create a new confg file in the aforementioned directory using vim by: vi cloudwatchconfig.cfg
+To create a monitoring confg file in the ec2 root directory with vim, copy the json file in this repo and then at prompt: vim agentconfig.cfg (or name it whatever your naming convention requires)
 	
-	Switch vim to insert mode and paste in the json file.
+Switch vim to insert mode and paste in the json file.
+
+To start it: sudo /opt/aws/amazon-cloudwatch-agent/bin/amazon-cloudwatch-agent-ctl -a fetch-config -m ec2 -c file:agentconfig.cfg -s
 	
 	
 	
