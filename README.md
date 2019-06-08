@@ -1,6 +1,8 @@
 # CloudWatch-Agent-Config-Base
 Basic configuration file for CloudWatch Agent installation on an EC2 Instance. 
 
+Ensure that you have attached CloudWatchAgentServerPolicy and CloudWatchFullAccess to your IAM role being assumed by the EC2 instance. 
+
 After cloudwatch agent deb file has been installed, you will find a directory created at /opt/aws/amazon-cloudwatch-agent/etc/common-config.toml If you have to change or add IAM permissions, you can edit this file with vim or nano.
 
 	
